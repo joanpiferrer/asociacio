@@ -1,0 +1,506 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"print",
+				"print_r"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "modules/mod_brilliant_instajoom/helper.php",
+			"settings":
+			{
+				"buffer_size": 2217,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os; pf = 'Package Control.sublime-package';"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/administrator",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/components/com_availcal/controllers",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/components/com_availcal/language/en-GB",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/components/com_availcal/models",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/components/com_availcal/models/forms",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/components/com_availcal/views",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/components/com_availcal/views/form",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/components/com_availcal/views/form/tmpl",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/modules",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/modules/mod_brilliant_instajoom",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/modules/mod_brilliant_instajoom/tmpl",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/plugins/authentication",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/plugins/authentication/cookie",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/plugins/authentication/joomla",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/templates/planb/img",
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/templates/planb/js"
+	],
+	"file_history":
+	[
+		"/Users/Joan/dropbox (joanpiferrer)/Dropbox/projectes/asociacio/sitemap.xml",
+		"/Users/Joan/Sites/joomla3/logs/kigo.log.php",
+		"/Users/Joan/Sites/joomla3/aspasios_export.sql",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php",
+		"/Users/Joan/Sites/joomla3/aspasios_db_05022016.sql",
+		"/Users/Joan/Sites/joomla3/logs/availpro.availabilities.log.php",
+		"/Users/Joan/Sites/joomla3/aspasios_export_01022015.sql",
+		"/Users/Joan/Downloads/concurso_old_db-migrate-20160114111551.sql",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php",
+		"/Users/Joan/Downloads/unificacio-clients-empreses-v3.csv",
+		"/Users/Joan/Downloads/unificacio-clients-empreses-v3.xlsx - CLIENTS.csv",
+		"/Users/Joan/Sites/mantis/mantis-to-worketc-egluu.php",
+		"/Users/Joan/Google Drive/unificacio.sql",
+		"/Users/Joan/Google Drive/Tables_in_aspasios_export.sql",
+		"/Users/Joan/Sites/joomla3/aspasios_db_15122015.sql",
+		"/Users/Joan/Sites/joomla3/aspasios_db_25112015.sql",
+		"/Users/Joan/Sites/joomla3/xml/turistics.xml",
+		"/Users/Joan/Sites/joomla3/logs/availpro.availabilities.log.php-20151012",
+		"/Users/Joan/Sites/joomla3/logs/checkin.post.log.php",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20151012",
+		"/Users/Joan/Sites/joomla3/sitemap.xml",
+		"/Users/Joan/Sites/joomla3/logs/checkin.post.log.php-20151118",
+		"/Users/Joan/Sites/joomla3/logs/checkin.post.log.php-20151117.gz",
+		"/Users/Joan/Sites/joomla3/aspasios_db_20112015.sql",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20151012.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.availabilities.log.php-20151012.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.availabilities.log.php-20151011.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.availabilities.log.php-20150729",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php-20150910",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php-20150909",
+		"/Users/Joan/Sites/joomla3/xml/ofertes.xml",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150826.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php-20150915",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150915",
+		"/Users/Joan/Sites/joomla3/logs/availpro.availabilities.log.php-20150915",
+		"/Users/Joan/Sites/joomla3/scripts/availpro_checksync.sh",
+		"/Users/Joan/Sites/joomla3/scripts/availpro.sh",
+		"/Users/Joan/Sites/joomla3/sitemap_old.xml",
+		"/var/folders/mz/csff7g3x2698rmb158cz05vh0000gn/T/sublime-sftp-browse-1442821937/mapped/home/aspasios/www/configuration.php",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php-20150909.gz",
+		"/Users/Joan/Sites/joomla3/xml/disponibilitat.xml",
+		"/Users/Joan/Sites/joomla3/logs/kigo.log.php-20150824",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php-20150810.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.availabilities.log.php-20150727",
+		"/Users/Joan/Sites/joomla3/logs/api-tripvisor.log.php-20150726.gz",
+		"/Users/Joan/Sites/joomla3/components/com_apartments/controllers/channels.php",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150724.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150724",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php-20150726.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php-20150727",
+		"/Users/Joan/Sites/joomla3/logs/availpro.checksync.log.php-20150726",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150727",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150719.gz",
+		"/Users/Joan/Sites/joomla3/htaccess.bak",
+		"/Users/Joan/Sites/joomla3/htaccess.txt",
+		"/Users/Joan/Sites/joomla3/.htaccess",
+		"/Users/Joan/Sites/joomla3/htaccess_bak",
+		"/Users/Joan/Apache24/my-ca.crt",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150617",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150617",
+		"/Users/Joan/Sites/joomla3/sftp-config.json",
+		"/Users/Joan/Sites/joomla3/sitemap_bak.xml",
+		"/Users/Joan/Sites/joomla3/logs/ga-ecommerce.log.php",
+		"/Users/Joan/Sites/joomla3/logs/ga-ecommerce.log.php-20150606",
+		"/Users/Joan/Sites/devel/administrator/components/com_apartments/models/booking.php",
+		"/Users/Joan/Sites/joomla3/aspasios_23062015.sql",
+		"/Users/Joan/Sites/joomla3/logs/ga-ecommerce.log.php-20150606.gz",
+		"/Users/Joan/Sites/joomla3/logs/ga-ecommerce.log.php-20150609.gz",
+		"/Users/Joan/Sites/joomla3/logs/ga-ecommerce.log.php-20150610",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php",
+		"/Users/Joan/Sites/joomla3/tmp/cookies.txt",
+		"/Users/Joan/Sites/joomla3/tmp/cookies_bak.txt",
+		"/Users/Joan/Sites/joomla3/logs/api-tripvisor.log.php-20150609.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150606.gz",
+		"/Users/Joan/Sites/joomla3/logs/api-tripvisor.log.php-20150607.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150607.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150531.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150602.gz",
+		"/Users/Joan/Sites/joomla3/logs/api-tripvisor.log.php-20150601.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150601.gz",
+		"/Users/Joan/Sites/joomla3/logs/api-tripvisor.log.php-20150531.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150528",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150529",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.concurso.log.php-20150529",
+		"/Users/Joan/Sites/joomla3/administrator/language/en-GB/en-GB.com_apartments.ini",
+		"/Users/Joan/Sites/joomla3/aspasios_db.sql",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150515",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150514",
+		"/Users/Joan/Sites/joomla3/htaccess_12052015",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150513",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150507",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150508.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150509.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150511.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150507.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150510.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150512",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150511",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150511",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150508",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150427",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150427.gz",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150508",
+		"/Users/Joan/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/76D8FF9A-92FE-449B-9776-F74DE05C4E72/default_booking_confirmation_pdf.php",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.intranet.log.php-20150506",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150506",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150507",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.concurso.log.php",
+		"/Users/Joan/Sites/joomla3/logs/tefpay.log.php-20150416.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150414",
+		"/Users/Joan/Sites/<?php phpinfo(); ?>",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150410.gz",
+		"/Users/Joan/Sites/joomla3/logs/availpro.log.php-20150404.gz",
+		"/Users/Joan/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/280F12C0-4EC5-440B-9AF8-5829FC0E0CAA/DeltaId/arxius de conf del server/dlt_id.ini",
+		"/Users/Joan/Downloads/country.sql",
+		"/Users/Joan/dumps/guests20150408.sql",
+		"/Users/Joan/Sites/joomla3/daily_aspasios_db_2015-04-08_00h33m_Wednesday.sql.gz",
+		"/Users/Joan/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/Joan/Downloads/concurso"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"2016-02-29T15:39",
+			"45091",
+			"create",
+			"64872",
+			"53769",
+			"64872",
+			"create",
+			"NULL'",
+			"),",
+			"'NULL)",
+			"\n",
+			"'NULL'",
+			",",
+			",\n",
+			"\n",
+			"metodo_pago",
+			"login(",
+			"$subproje",
+			"joan@aspasios.com",
+			"kare",
+			"calle ma",
+			"calle mayor",
+			"calle may",
+			"rambla",
+			"insertEvent",
+			"mayor",
+			"1490",
+			"1490	",
+			"calle mayor",
+			"<idpiso>",
+			"45090",
+			"2537",
+			"45090",
+			"JDR5PD",
+			"45090",
+			"JDR5PD",
+			"\n",
+			"https://www.aspasios.com/",
+			"ENG: https://www.aspasios.com/",
+			"page-",
+			"page-25",
+			"JV5WE1",
+			"45088",
+			"JVE2TL",
+			"45088",
+			"START: Aspasios checkInternalAvailabilities() ",
+			"START: Aspasios checkInternalAvailabilities()",
+			"START: ",
+			"START: Availpro",
+			"START: Aspasios and Availpro sync",
+			"START: Availpro checkSyncAvailabilities()",
+			"Aspasios and Availpro sync",
+			"2015-09-14",
+			"4243050",
+			"95826",
+			"\"PROP_ID\":16579,\"RES_STATUS\":\"INQUIRY\",\"RES_CHECK_IN\":\"2015-09-11\",\"RES_CHECK_OUT\":\"2015-09-13\"",
+			"\"PROP_ID\":16579,\"RES_STATUS\":\"HOLD\",\"RES_CHECK_IN\":\"2015-09-11\",\"RES_CHECK_OUT\":\"2015-09-13\"",
+			"\"PROP_ID\":16579,\"RES_STATUS\":\"CONFIRMED\",\"RES_CHECK_IN\":\"2015-09-11\",\"RES_CHECK_OUT\":\"2015-09-13\"",
+			"5KEMNM",
+			"Guevara",
+			"GuevaraGuevara",
+			"JVS1W6",
+			"31732",
+			"JVGXWY",
+			"31732",
+			"31733",
+			"31736",
+			"mysql.proc",
+			"create",
+			"listbooking",
+			"listb",
+			"listBookingSources",
+			"31635",
+			"4116595",
+			"16592",
+			"create",
+			"16459",
+			"1202",
+			"1200",
+			"1446",
+			"2718",
+			"480",
+			"JVLRHU",
+			"\"\n",
+			"45915",
+			"31369",
+			"1202",
+			"B1",
+			"1202",
+			"45915",
+			"30531",
+			"apartment id",
+			"59024",
+			"49233",
+			"apartment id",
+			"45091",
+			"53770",
+			"45091",
+			"cancel",
+			"apartment id not",
+			"cancel",
+			"create",
+			"53770",
+			"JV2GCB",
+			"J4QN1B",
+			"30353",
+			"J4QN1B",
+			"45091",
+			"apartment id",
+			"apartment",
+			"45091",
+			"27365",
+			"45091",
+			"deviceid",
+			"J4X7IG",
+			"JNZECW",
+			"59034",
+			"J45R4I",
+			"J4YQWU",
+			"J45SKE",
+			"J4YQ8N",
+			"J45R4I",
+			"J45B5L",
+			"J4YQ8N",
+			"J45R4I",
+			"J45SKE",
+			"59027",
+			"45090"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"NULL",
+			"'),",
+			"NULL)",
+			"NULL",
+			"','",
+			"jos_apartments_guest_bak`"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "modules/mod_brilliant_instajoom/helper.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "asociacio.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"channels",
+				"components/com_apartments/controllers/channels.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/sublime projects/fuster.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 288.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

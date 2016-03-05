@@ -1,0 +1,251 @@
+// Include Bootstrap
+@import "../bootstrap/less/bootstrap.less";
+// Bootstrap mixins
+@import "../bootstrap/less/mixins.less";
+// Make it responsive! 
+@import "responsive.less";
+// Theme parameters
+@import "parameters.less";
+
+body { 
+  background-color: @background-color-body;
+  letter-spacing: 0.5px;
+}
+
+.container {
+   background-color: @background-color-container;
+   height: 100%; 
+   padding-left: 5px;
+   padding-right: 5px;
+ }
+ 
+div.control-label{
+  text-align: left!important;
+}
+// CAROUSEL 
+
+.carousel {
+ // top: 40px;
+  width: 516px;
+  height: 316px;
+  margin: 0 auto;
+  padding: 8px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+}
+
+.carousel-control.right{
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+ .carousel-control.left{
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: 300px;
+  line-height: 1;
+}
+
+//HEADER
+
+.brand {
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+
+  img {
+    height: 100px;
+  }
+}
+
+.facebook:hover, .pinterest:hover {
+
+  opacity: 0.5;
+
+}
+
+//NAVBAR
+
+.navbar {
+  min-height: initial;
+  margin-bottom: 0;
+  border-radius: 10px 10px 0 10px;
+
+  li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.navbar-default {
+  #gradient > .vertical(@navbar-default-bg, @navbar-default-bg-dark);
+}
+
+.navbar-default .navbar-nav > li:first-child > a {
+
+  border-radius: @navbar-border-radius 0 0 @navbar-border-radius;
+
+}
+
+.navbar-default .navbar-nav > li:last-child > a {
+
+  border-radius: 0 @navbar-border-radius 0 0;
+
+}
+
+.nav.main_menu {
+  li {
+    a {
+      padding: 10px 67.7px;
+    }
+  }
+}
+
+.sidebar_right_menu{
+  min-height:200px;
+  background-color: #eee;
+  padding-top: 40px;
+  li {
+    float: left;
+    width:100%;
+    a{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  li.active > a{
+    #gradient > .vertical(@brand-primary, darken(@brand-primary,15%));
+    color: white;
+    font-weight: bold;
+  }
+}
+
+// gcalendar
+table#footer1 {
+  display: none;
+}
+
+.login{
+  .form-horizontal .control-label {
+    text-align: center;
+  }
+}
+
+#content{
+  padding:30px;
+}
+
+.page-header{
+  margin-top: 0;
+}
+
+h2{
+  margin-top: 0;
+}
+
+//responsive
+#calendario_partidas{
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+       width: 233px;
+    }
+}
+
+.nav.main_menu li a {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    padding: 10px 51px;
+  }
+}
+
+.brand img {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    height: 87px;
+  }
+}
+
+.insta_link{
+  position: relative;
+
+  .thumbnail-text{
+    background-color: rgba(255,255,255,0.75);
+    width: 150px;
+    position: absolute;
+    bottom: -65px;
+    height: 45px;
+    margin-left: 5px;
+    padding: 3px;
+    color: black;
+    font-weight: bold;
+    overflow: hidden; 
+  }
+}
+
+.item-page {
+
+  img{
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+.blog{
+
+  img{
+    padding: 8px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+.chzn-choices{
+  width: 200px!important;  
+    .search-field{
+    width: 200px!important;  
+
+    input{
+      height:20px!important;
+      width: 200px!important;  
+    }
+  } 
+}
+
+.jform_usergroup{
+  width: 200px!important;
+}
+
+#jform_usergroup_chzn{
+  width:200px!important;
+}
+
+.facebook,.twitter,.pinterest{
+ @media (max-width: @screen-sm-max) {
+      float:left;
+    }
+}
+ 

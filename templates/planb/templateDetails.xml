@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>planb</name>
+	<version>1.0</version>
+	<creationDate>08/02/2014</creationDate>
+	<author>Joan Piferrer</author>
+	<authorEmail>joanpiferrer@gmail.com</authorEmail>
+	<description>TPL_PLANB_XML_DESCRIPTION</description>
+	<positions>
+		<position>banner</position>
+		<position>debug</position>
+		<position>header-social</position>
+		<position>header-login</position>
+		<position>navigation</position>
+		<position>below-component</position>
+		<position>above-component</position>
+		<position>sidebar-right</position>
+		<position>sidebar-left</position>
+		<position>footer</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="logoFile" class="" type="media" default=""
+					label="TPL_PLANB_LOGO_LABEL"
+					description="TPL_PLANB_LOGO_DESC" />
+					
+				<field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+
+				<field name="googleFont"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_PLANB_FONT_LABEL"
+					description="TPL_PLANB_FONT_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="googleFontName" class="" type="text" default="Open+Sans"
+					label="TPL_PLANB_FONT_NAME_LABEL"
+					description="TPL_PLANB_FONT_NAME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

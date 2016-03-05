@@ -1,0 +1,28 @@
+// Override Bootstrap default variables
+@import "../bootstrap/less/variables.less";
+
+@background-color-container: #fff;
+@background-color-body:       #FF8E00;
+@grid-gutter-width:         0;
+@font-family-base:          calibri;
+
+  // Basics of a navbar
+@navbar-height:                    50px;
+@navbar-margin-bottom:             @line-height-computed;
+@navbar-border-radius:             15px;
+@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+
+@navbar-default-color:             #777;
+@navbar-default-bg:                @background-color-body;
+@navbar-default-bg-dark:           darken(@navbar-default-bg, 15%);
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+@navbar-default-link-color:                #FFF;
+@navbar-default-link-hover-color:          #333;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         #555;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
