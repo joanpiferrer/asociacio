@@ -3,7 +3,7 @@
  * @package     Joomla.Plugin
  * @subpackage  Search.contacts
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,9 +12,7 @@ defined('_JEXEC') or die;
 /**
  * Contacts search plugin.
  *
- * @package     Joomla.Plugin
- * @subpackage  Search.contacts
- * @since       1.6
+ * @since  1.6
  */
 class PlgSearchContacts extends JPlugin
 {
@@ -157,7 +155,6 @@ class PlgSearchContacts extends JPlugin
 					. ' OR a.fax LIKE ' . $text . ') AND a.published IN (' . implode(',', $state) . ') AND c.published=1 '
 					. ' AND a.access IN (' . $groups . ') AND c.access IN (' . $groups . ')'
 			)
-			->group('a.id, a.con_position, a.misc, c.alias, c.id')
 			->order($order);
 
 		// Filter by language.
@@ -169,7 +166,16 @@ class PlgSearchContacts extends JPlugin
 		}
 
 		$db->setQuery($query, 0, $limit);
-		$rows = $db->loadObjectList();
+
+		try
+		{
+			$rows = $db->loadObjectList();
+		}
+		catch (RuntimeException $e)
+		{
+			$rows = array();
+			JFactory::getApplication()->enqueueMessage(JText::_('JERROR_AN_ERROR_HAS_OCCURRED'), 'error');
+		}
 
 		if ($rows)
 		{

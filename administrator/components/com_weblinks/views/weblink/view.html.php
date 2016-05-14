@@ -3,7 +3,7 @@
  * @package     Joomla.Administrator
  * @subpackage  com_weblinks
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,9 +12,7 @@ defined('_JEXEC') or die;
 /**
  * View to edit a weblink.
  *
- * @package     Joomla.Administrator
- * @subpackage  com_weblinks
- * @since       1.5
+ * @since  1.5
  */
 class WeblinksViewWeblink extends JViewLegacy
 {
@@ -60,7 +58,7 @@ class WeblinksViewWeblink extends JViewLegacy
 		// Since we don't track these assets at the item level, use the category id.
 		$canDo		= JHelperContent::getActions('com_weblinks', 'category', $this->item->catid);
 
-		JToolbarHelper::title(JText::_('COM_WEBLINKS_MANAGER_WEBLINK'), 'link weblinks');
+		JToolbarHelper::title($isNew ? JText::_('COM_WEBLINKS_MANAGER_WEBLINK_NEW') : JText::_('COM_WEBLINKS_MANAGER_WEBLINK_EDIT'), 'link weblinks');
 
 		// If not checked out, can save the item.
 		if (!$checkedOut && ($canDo->get('core.edit')||(count($user->getAuthorisedCategories('com_weblinks', 'core.create')))))
