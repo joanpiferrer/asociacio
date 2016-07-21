@@ -110,15 +110,11 @@ else
 						</a>
 						<div class="col-md-2 col-xs-7">
 							<br>
-							C/ Biada nº3<br>
-							93.368.12.82<br>
-							info@planb-miniaturas.com<br><br>
+							Passatge de Nogués nº53<br>
+							irregularesplanb@gmail.com<br><br>
 						</div>
 						<div class="col-md-2 col-xs-5">
-							<br>
-							De Lunes a Sábado<br>
-							10:30 a 14:00<br>
-							17:00 a 20:30
+
 						</div>
 						<div class="col-md-2 col-xs-7">
 							<jdoc:include type="modules" name="header-social" style="none" />
@@ -133,10 +129,13 @@ else
 							<a style="margin-bottom:10px;" class="btn btn-primary" data-toggle="modal" href="<?php echo 'index.php?option=com_users&view=login&tmpl=component';?>" data-target="#myModal">
 							<span class="glyphicon glyphicon-log-in"></span> Identificarse
 							</a>
-
-							<a class="btn btn-primary" data-toggle="modal" href="index.php?option=com_users&view=registration&tmpl=component" data-target="#myModal2">
-							<span class="glyphicon glyphicon-plus-sign"></span> Registrarse
-							</a>
+								<?php
+								$usersConfig = JComponentHelper::getParams('com_users');
+								if ($usersConfig->get('allowUserRegistration')) : ?>
+									<a class="btn btn-primary" data-toggle="modal" href="index.php?option=com_users&view=registration&tmpl=component" data-target="#myModal2">
+									<span class="glyphicon glyphicon-plus-sign"></span> Registrarse
+									</a>
+								<?php endif; ?>
 						<?php else:
 
 						?>
