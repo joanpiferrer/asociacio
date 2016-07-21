@@ -121,7 +121,7 @@ else
 						</div>
 						<div class="col-md-2 col-xs-5" style="text-align:center;padding-top:10px;">
 							<!-- <jdoc:include type="modules" name="header-login" style="none" /> -->
-							<!--<a href="<?php echo JRoute::_('index.php?option=com_users&view=login&tmpl=component') ?>" class="btn btn-primary modal" rel="{size: {x: 375, y: 415}}"> 
+							<!--<a href="<?php echo JRoute::_('index.php?option=com_users&view=login&tmpl=component') ?>" class="btn btn-primary modal" rel="{size: {x: 375, y: 415}}">
 							<span class="glyphicon glyphicon-log-in"></span> Identificarse
 							</a>-->
 							<?php //var_dump($user); ?>
@@ -150,8 +150,8 @@ else
 						<a class="btn btn-primary"href="component/users/?task=profile.edit&user_id=<?php echo $user->id; ?>">
 							<span class="glyphicon glyphicon-user"></span> Editar perfil<!--<?php echo $user->name; ?>-->
 							</a>
-							<?php 
-							
+							<?php
+
 						?>
 						<?php
 
@@ -244,15 +244,6 @@ else
 		</div>
 	</footer>
 	<jdoc:include type="modules" name="debug" style="none" />
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-52157050-1', 'planb-miniaturas.com');
-  ga('send', 'pageview');
-
-</script>
 </body>
 </html>
