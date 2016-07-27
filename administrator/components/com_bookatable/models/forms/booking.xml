@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/components/com_bookatable/models/fields">
+		<field name="id" type="hidden" />
+		<field name="user_id" type="sql" default="10" label="Selecciona un usuario" query="SELECT id, name FROM #__users WHERE block = 0" key_field="id" value_field="name" />
+		<field name="table_id" type="sql" default="10" label="Seleccciona una mesa" query="SELECT id, name FROM #__bookatable_tables" key_field="id" value_field="name"/>
+		<field name="evening" type="list" default="" label="Mañana / Tarde"
+			description="Franja horaria de la reserva">
+			<option value="1">Mañana</option>
+			<option value="0">Tarde</option>
+		</field>
+		<field name="date" type="calendar" default="NOW"
+			label="Fecha" description="fecha de la reserva" format="%Y-%m-%d" />
+	</fieldset>
+</form>
+
