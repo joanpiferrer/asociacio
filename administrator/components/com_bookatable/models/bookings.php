@@ -84,7 +84,7 @@ class BookaTableModelBookings extends JModelList {
         $query = $db->getQuery(true);
         $user = JFactory::getUser();
         // Select some fields
-        $query->select('a.*');
+        $query->select('a.*, u.name AS user, t.name AS `table`');
         // From the Avail_Calendar table
         $query->from('#__bookatable_bookings AS a 
         INNER JOIN #__bookatable_tables AS t ON a.table_id = t.id 

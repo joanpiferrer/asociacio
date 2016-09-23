@@ -19,4 +19,15 @@ class BookaTableTableBooking extends JTable
 	{
 		parent::__construct('#__bookatable_bookings', 'id', $db);
 	}
+
+	/**
+	 * @param $data
+	 * @return bool
+     */
+	function isAvailable($data)
+	{
+		
+
+		return true;
+	}
 }
