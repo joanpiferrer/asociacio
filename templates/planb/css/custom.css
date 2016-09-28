@@ -443,12 +443,15 @@ a:hover, a:focus {
 .navbar-header {
   background: #34495E; }
 
+.navbar-left {
+  margin-top: 10px;
+  float: left; }
+
 .navbar-right {
   margin-right: 0; }
 
 .top_nav .navbar-right {
   margin: 0;
-  width: 70%;
   float: right; }
 
 .top_nav .navbar-right li {
@@ -465,9 +468,6 @@ a:hover, a:focus {
 .top_nav .dropdown-menu li a {
   width: 100%;
   padding: 12px 20px; }
-
-.top_nav li a i {
-  font-size: 15px; }
 
 .navbar-static-top {
   position: fixed;
@@ -1838,7 +1838,10 @@ a.star {
 @media (max-width: 767px) {
   .mail_list {
     margin-bottom: 5px;
-    display: inline-block; } }
+    display: inline-block; }
+
+  .main-logo {
+    width: 100%; } }
 .mail_heading h4 {
   font-size: 18px;
   border-bottom: 1px solid #ddd;

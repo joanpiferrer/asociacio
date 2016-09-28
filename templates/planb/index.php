@@ -43,7 +43,7 @@ if ($this->countModules('sidebar-right') && $this->countModules('sidebar-left'))
 
 // Logo file or site title param
 if ($this->params->get('logoFile')) {
-    $logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+    $logo = '<img class="main-logo" src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
 } elseif ($this->params->get('sitetitle')) {
     $logo = '<span class="site-title" title="' . $sitename . '">' . htmlspecialchars($this->params->get('sitetitle')) . '</span>';
 } else {
@@ -121,6 +121,9 @@ if ($this->params->get('logoFile')) {
                     <div class="nav toggle">
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
+                    <div class="navbar-left">
+                        Passatge de Nogués nº53 <br> <a href="mailto:irregularesplanb@gmail.com">irregularesplanb@gmail.com</a>
+                    </div>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -187,13 +190,13 @@ if ($this->params->get('logoFile')) {
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">
                                     <li><a href="component/users/?task=profile.edit&user_id=<?php echo $user->id; ?>">
-                                            <span class="glyphicon glyphicon-user"></span> Editar perfil
+                                            <span class="fa fa-user"></span> Editar perfil
                                             <!--<?php echo $user->name; ?>-->
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:document.formlogout.submit();">
-                                            <span class="glyphicon glyphicon glyphicon-log-out"></span> Salir
+                                            <span class="fa glyphicon fa-sign-out"></span> Salir
                                         </a>
                                     </li>
                                 </ul>
