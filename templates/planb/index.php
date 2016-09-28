@@ -249,7 +249,7 @@ if ($this->params->get('logoFile')) {
 </div>
 
 <!-- jQuery -->
-<script src="templates/planb/js/jquery/jquery.min.js"></script>
+<script src="templates/planb/js/jQuery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="templates/planb/js/bootstrap/bootstrap.min.js"></script>
 
