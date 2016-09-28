@@ -4,6 +4,8 @@ div.control-label{
 }
 .left_col {
   background: #2A3F54;
+  height: 100%;
+  z-index: 0!important;
 }
 .nav-sm .container.body .col-md-3.left_col {
   width: 70px;
@@ -202,9 +204,6 @@ div.control-label{
   height: 100%;
   position: fixed;
 }
-body .container.body .right_col {
-  background: white;
-}
 .nav-md .container.body .right_col {
   padding: 10px 20px 0;
   margin-left: 230px;
@@ -338,7 +337,7 @@ body .container.body .right_col {
 }
 body {
   color: #73879C;
-  background: #2A3F54;
+  background-image: url(http://wallpaper.zone/img/2286773.jpg);
   font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -348,7 +347,9 @@ body {
   display: block;
   margin-left: 230px;
 }
-.main_container {}
+.main_container {
+  background-color: rgba(255, 255, 255, 0.8);
+}
 .no-padding {
   padding: 0 !important;
 }
@@ -694,6 +695,7 @@ footer {
   background: #fff;
   padding: 15px 20px;
   display: block;
+  z-index: 100;
 }
 @media (min-width: 768px) {
   footer {
