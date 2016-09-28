@@ -17,7 +17,6 @@ $doc             = JFactory::getDocument();
 $this->language  = $doc->language;
 $this->direction = $doc->direction;
 
-$doc->addStyleSheet('templates/planb/css/template.css');
 
 // Detecting Active Variables
 $option   = $app->input->getCmd('option', '');
@@ -27,8 +26,6 @@ $task     = $app->input->getCmd('task', '');
 $itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->getCfg('sitename');
 
-// Add JavaScript Frameworks
-JHtml::_('bootstrap.framework');
 
 ?>
 <!DOCTYPE html>
@@ -67,6 +64,6 @@ JHtml::_('bootstrap.framework');
 	<div class="body">
 		<jdoc:include type="message" />
 		<jdoc:include type="component" />
-					
+
 	</body>
 </html>

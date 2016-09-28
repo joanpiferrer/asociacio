@@ -14,3 +14,4 @@
 2015-08-31T22:51:14+00:00	INFO	joomlafailure	No se permiten contraseñas vacías
 2015-08-31T22:51:24+00:00	INFO	joomlafailure	No se permiten contraseñas vacías
 2015-08-31T22:52:28+00:00	INFO	joomlafailure	El usuario y contraseña no coinciden o usted aún no tiene una cuenta.
+2016-09-27T23:04:16+00:00	INFO 127.0.0.1	joomlafailure	El usuario y contraseña no coinciden o usted aún no tiene una cuenta.

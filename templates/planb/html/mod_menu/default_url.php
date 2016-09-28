@@ -11,10 +11,8 @@ defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
 
-$item->anchor_css = $item->parent ? $item->anchor_css . ' dropdown-toggle' : '';
-$caret = $item->parent ? '<b class="caret"></b>' : '';
+$caret = $item->parent ? '<span class="fa fa-chevron-down"></span>' : '';
 $data_toggle      = $item->parent ? 'data-toggle="dropdown"' : '';
-$class            = $item->anchor_css ? 'class="' . $item->anchor_css . '" ' : '';
 $title            = $item->anchor_title ? 'title="' . $item->anchor_title . '" ' : '';
 
 
@@ -35,15 +33,15 @@ $flink = JFilterOutput::ampReplace(htmlspecialchars($flink));
 switch ($item->browserNav) :
 	default:
 	case 0:
-?><a <?php echo $class . ' ' . $data_toggle; ?>href="<?php echo $flink; ?>" <?php echo $title; ?>><?php echo $linktype.$caret; ?></a><?php
+?><a <?php echo $data_toggle; ?>href="<?php echo $flink; ?>" <?php echo $title; ?>><i class="<?php echo $item->anchor_css;?>"></i><?php echo $linktype.$caret; ?></a><?php
 		break;
 	case 1:
 		// _blank
-?><a <?php echo $class . ' ' . $data_toggle; ?>href="<?php echo $flink; ?>" target="_blank" <?php echo $title; ?>><?php echo $linktype.$caret; ?></a><?php
+?><a <?php echo $data_toggle; ?>href="<?php echo $flink; ?>" target="_blank" <?php echo $title; ?>><i class="<?php echo $item->anchor_css;?>"></i><?php echo $linktype.$caret; ?></a><?php
 		break;
 	case 2:
 		// window.open
 		$options = 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,'.$params->get('window_open');
-			?><a <?php echo $class; ?>href="<?php echo $flink; ?>" onclick="window.open(this.href,'targetWindow','<?php echo $options;?>');return false;" <?php echo $title; ?>><?php echo $linktype.$caret; ?></a><?php
+			?><a href="<?php echo $flink; ?>" onclick="window.open(this.href,'targetWindow','<?php echo $options;?>');return false;" <?php echo $title; ?>><i class="<?php echo $item->anchor_css;?>"></i><?php echo $linktype.$caret; ?></a><?php
 		break;
 endswitch;

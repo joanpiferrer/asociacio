@@ -1,0 +1,21 @@
+{
+  "name": "irregularsplanb",
+  "version": "1.0.0",
+  "description": "1- What is this? \t* This is a Joomla! installation/upgrade package to version 3.x \t* Joomla! Official site: https://www.joomla.org \t* Joomla! 3.5 version history - https://docs.joomla.org/Joomla_3.5_version_history \t* Detailed changes in the Changelog: https://github.com/joomla/joomla-cms/commits/master",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joanpiferrer/asociacio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joanpiferrer/asociacio/issues"
+  },
+  "homepage": "https://github.com/joanpiferrer/asociacio#readme"
+}

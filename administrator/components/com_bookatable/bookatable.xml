@@ -14,6 +14,18 @@
 	<!-- The description is optional and defaults to the name -->
 	<description>Component for booking wargame tables</description>
 
+	<!-- Site Main File Section -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>bookatable.php</filename>
+		<filename>controller.php</filename>
+		<folder>controllers</folder>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>assets</folder>
+		<folder>language</folder>
+	</files>
+
 	<administration>
 		<!-- Administration Menu Section -->
 		<menu link='index.php?option=com_bookatable'>Book a table!</menu>
