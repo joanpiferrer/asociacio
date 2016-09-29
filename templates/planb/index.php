@@ -40,15 +40,19 @@ if ($this->countModules('sidebar-right') && $this->countModules('sidebar-left'))
 } else {
     $col = "col-md-12";
 }
-
-// Logo file or site title param
-if ($this->params->get('logoFile')) {
-    $logo = '<img class="main-logo" src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
-} elseif ($this->params->get('sitetitle')) {
-    $logo = '<span class="site-title" title="' . $sitename . '">' . htmlspecialchars($this->params->get('sitetitle')) . '</span>';
-} else {
-    $logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+if ($menu->getActive() == $menu->getDefault()) {
+    // Logo file or site title param
+    if ($this->params->get('logoFile')) {
+        $logo = '<img class="main-logo" src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+    } elseif ($this->params->get('sitetitle')) {
+        $logo = '<span class="site-title" title="' . $sitename . '">' . htmlspecialchars($this->params->get('sitetitle')) . '</span>';
+    } else {
+        $logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
+    }
 }
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>"
@@ -83,6 +87,9 @@ if ($this->params->get('logoFile')) {
     <link href="templates/planb/css/font-awesome/font-awesome.min.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="templates/planb/css/custom.css" rel="stylesheet">
+    <!--    pickadate-->
+    <link href="templates/planb/css/default.css" rel="stylesheet">
+    <link href="templates/planb/css/default.date.css" rel="stylesheet">
 </head>
 
 <!-- Body -->
@@ -259,6 +266,21 @@ if ($this->params->get('logoFile')) {
 <!-- Custom Theme Scripts -->
 <script src="templates/planb/js/custom.js"></script>
 <script src="templates/planb/js/helper.js"></script>
+<!-- pickadate -->
+<script src="/templates/planb/js/picker.js"></script>
+<script src="/templates/planb/js/picker.date.js"></script>
+<script src="/templates/planb/js/moment/moment.min.js"></script>
+
+<script src="/components/com_bookatable/assets/vue.js"></script>
+<script src="/components/com_bookatable/assets/vue-resource.min.js"></script>
+<script src="/components/com_bookatable/assets/dashboard.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.datepicker').pickadate({
+            format: 'yyyy-mm-dd'
+        });
+    });
+</script>
 
 <jdoc:include type="modules" name="debug" style="none"/>
 </body>
