@@ -19,4 +19,41 @@ class BookaTableControllerDashboard extends JControllerAdmin
 		$model = parent::getModel($name, $prefix, array('ignore_request' => true));
 		return $model;
 	}
+
+
+	public function getBookings()
+	{
+		$post = JFactory::getApplication()->input->post;
+
+		$data = array(
+			'date' => $post->get('date')
+		);
+
+		echo json_encode($data);
+		die;
+	}
+
+	public function getTables()
+	{
+		/** @var JDatabaseDriver $db */
+		$db = JFactory::getDbo();
+		$query = $db->getQuery(true);
+
+		$query->select('*')
+			->from('#__bookatable_tables')
+			->where('active = 1');
+
+		$db->setQuery($query);
+
+		$db->execute();
+
+		$tables = $db->loadObjectList();
+
+		$data = array(
+			'tables' => $tables
+		);
+
+		echo json_encode($data);
+		die;
+	}
 }
