@@ -18,7 +18,7 @@
                 </div>
                 <div class="x_content">
                     <div class="input-group">
-                        <input type="text" class="form-control datepicker" v-model="date">
+                        <input type="text" class="form-control datepicker" v-model="date" >
                     <span class="input-group-btn">
                       <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
                     </span>
@@ -41,8 +41,7 @@
                 <div class="x_content">
                     <template v-for="table in tables">
                         <div class="col-md-6">
-
-                            <button type="button" class="btn btn-success btn-lg btn-block">{{table.name}}</button>
+                            <button type="button" class="btn-lg btn-block btn" v-bind:class="{ 'btn-danger':  table.occupied, 'btn-success': !table.occupied}">{{table.name}}</button>
                         </div>
                     </template>
                 </div>
