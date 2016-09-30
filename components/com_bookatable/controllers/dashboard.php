@@ -35,6 +35,15 @@ class BookaTableControllerDashboard extends JControllerAdmin
 
 	public function getTables()
 	{
+
+		$post = JFactory::getApplication()->input->post;
+
+		$data = array(
+			'date'   => $post->get('date'),
+			'franja' => $post->get('franja'),
+			'user_id' => $post->get('user_id'),
+		);
+
 		/** @var JDatabaseDriver $db */
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
@@ -49,6 +58,25 @@ class BookaTableControllerDashboard extends JControllerAdmin
 
 		$tables = $db->loadObjectList();
 
+		foreach($tables as &$table){
+
+			$query = $db->getQuery(true);
+
+			$query->select('*')
+				->from('#__bookatable_bookings')
+				->where('date = "' . $data['date'] .'"')
+				->where('table_id = ' . $table->id)
+				->where('evening = ' . $data['franja']);
+
+			$db->setQuery($query);
+
+			$db->execute();
+
+			if (count($db->loadObjectList()) > 0) {
+				$table->occupied = true;
+			}
+
+		}
 		$data = array(
 			'tables' => $tables
 		);

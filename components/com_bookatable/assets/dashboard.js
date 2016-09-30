@@ -11,7 +11,7 @@ var Toggle = Vue.extend({
     methods: {
         changeSelectVal: function(val) {
             this.selected = val;
-            vm.getBookings();
+            vm.getTables();
         }
     }
 });
@@ -50,7 +50,10 @@ var vm = new Vue({
 
             var formData = new FormData();
 
-            this.$http.get('/index.php?option=com_bookatable&task=dashboard.getTables').then((response) => {
+            formData.append('date', vm.date);
+            formData.append('franja', vm.franja);
+
+            this.$http.post('/index.php?option=com_bookatable&task=dashboard.getTables', formData).then((response) => {
                 vm.tables = JSON.parse(response.body).tables;
             }, (response) => {
                 // error callback
