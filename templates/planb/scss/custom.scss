@@ -713,6 +713,12 @@ footer {
     margin-left: 0;
   }
 }
+@media (max-width: 768px) {
+  .footer_fixed footer {
+    position: relative;
+    margin-left: 0;
+  }
+}
 @media (min-width: 768px) {
   .footer_fixed .nav-sm footer {
     margin-left: 0;
@@ -1913,7 +1919,7 @@ a.star {
 }
 
 .buttons, button, .btn {
-  margin-bottom: 5px;
+  margin-bottom: 5px!important;
   margin-right: 5px;
 }
 

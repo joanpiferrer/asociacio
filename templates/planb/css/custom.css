@@ -683,6 +683,10 @@ footer {
 @media (min-width: 768px) {
   .footer_fixed footer {
     margin-left: 0; } }
+@media (max-width: 768px) {
+  .footer_fixed footer {
+    position: relative;
+    margin-left: 0; } }
 @media (min-width: 768px) {
   .footer_fixed .nav-sm footer {
     margin-left: 0; } }
@@ -1791,7 +1795,7 @@ a.star {
   width: 100%; }
 
 .buttons, button, .btn {
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
   margin-right: 5px; }
 
 .btn-group-vertical .btn, .btn-group .btn {
