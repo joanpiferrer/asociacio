@@ -46,7 +46,7 @@ class BookaTableControllerBooking extends JControllerForm
             $query->select('*')
                 ->from('#__bookatable_bookings')
                 ->where('id != ' . $recordId)
-                ->where('date > NOW()')
+                ->where('date >= CURDATE()')
                 ->where('user_id = ' . $data['user_id']);
 
             $db->setQuery($query);
