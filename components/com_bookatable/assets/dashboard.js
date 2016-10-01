@@ -22,6 +22,7 @@ var vm = new Vue({
     el: '#dashboard',
     data:{
         date: moment().format('YYYY-MM-DD'),
+        date_formated: moment().locale('es').format('LL'),
         franja: '2',
         franjas: {
             '1': 'Mañana',
@@ -38,6 +39,7 @@ var vm = new Vue({
     },
     watch: {
         date: function(val, oldVal){
+            vm.date_formated = moment(val).locale('es').format('LL'),
             vm.getTables();
         }
     },
@@ -111,9 +113,6 @@ var vm = new Vue({
         },
     }
 });
-
-
-
 
 vm.getTables();
 vm.getBookings();

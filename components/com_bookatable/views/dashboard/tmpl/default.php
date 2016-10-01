@@ -13,7 +13,8 @@
         <div class="col-md-4 col-sm-4 col-xs-12 form-group">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Selecciona fecha y franja</h2>
+                    <h2>Selecciona fecha y franja</h2><br><br>
+                    <small>Primero selecciona el dia y la franja horaria que te interesan</small>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -36,7 +37,8 @@
         <div class="col-md-4 col-sm-4 col-xs-12 form-group">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Estado de las mesas</h2>
+                    <h2>Estado de las mesas</h2><br><br>
+                    <small>Selecciona una de las mesas verdes para hacer una reserva</small>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -58,7 +60,7 @@
                                             <h4 class="modal-title" id="myModalLabel">Reservar {{table.name}}</h4>
                                         </div>
                                         <div class="modal-body">
-                                            ¿Estas seguro que quieres reservar la {{table.name}}?
+                                            ¿Estas seguro que quieres reservar la {{table.name}} para el {{date_formated}} por la {{franja.replace("1", "Mañana").replace("2", "Tarde").replace("3", "Noche")}}?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -103,7 +105,8 @@
             <div class="col-md-4 col-sm-4 col-xs-12 form-group">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Reserva activa</h2>
+                        <h2>Reservas activas</h2><br><br>
+                        <small>Haz click en el <i class="fa fa-trash"></i> para eliminar la reserva</small>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
