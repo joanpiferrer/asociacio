@@ -270,6 +270,7 @@ if ($menu->getActive() == $menu->getDefault()) {
 <script src="/templates/planb/js/picker.js"></script>
 <script src="/templates/planb/js/picker.date.js"></script>
 <script src="/templates/planb/js/moment/moment.min.js"></script>
+<script src="/templates/planb/js/moment/es.js"></script>
 
 <script src="/components/com_bookatable/assets/vue.js"></script>
 <script src="/components/com_bookatable/assets/vue-resource.min.js"></script>
