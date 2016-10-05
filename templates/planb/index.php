@@ -269,6 +269,7 @@ if ($menu->getActive() == $menu->getDefault()) {
 <!-- pickadate -->
 <script src="/templates/planb/js/picker.js"></script>
 <script src="/templates/planb/js/picker.date.js"></script>
+<script src="/templates/planb/js/es_ES.js"></script>
 <script src="/templates/planb/js/moment/moment.min.js"></script>
 <script src="/templates/planb/js/moment/es.js"></script>
 
@@ -277,8 +278,13 @@ if ($menu->getActive() == $menu->getDefault()) {
 <script src="/components/com_bookatable/assets/dashboard.js"></script>
 <script>
     $(document).ready(function() {
+        var yesterday = new Date((new Date()).valueOf()-1000*60*60*24);
         $('.datepicker').pickadate({
-            format: 'yyyy-mm-dd'
+            format: 'yyyy-mm-dd',
+            firstDay: 1,
+            disable: [
+                { from: [0,0,0], to: yesterday }
+            ]
         });
     });
 </script>
