@@ -24,6 +24,7 @@ var vm = new Vue({
         date: moment().format('YYYY-MM-DD'),
         date_formated: moment().locale('es').format('LL'),
         franja: '2',
+        selected_game: '0',
         franjas: {
             '1': 'Mañana',
             '2': 'Tarde',
@@ -35,6 +36,9 @@ var vm = new Vue({
         bookings:{
 
         },
+        games:{
+
+        },
 
     },
     watch: {
@@ -44,6 +48,9 @@ var vm = new Vue({
         }
     },
     methods: {
+        alert: function(msg) {
+            alert(msg);
+        },
         getBookings: function() {
 
             this.$http.get('/index.php?option=com_bookatable&task=dashboard.getBookings').then((response) => {
@@ -80,17 +87,32 @@ var vm = new Vue({
                 alert('Ha ocurrido un error vuelve a cargar la página e intentalo otra vez.');
             });
         },
+        getGames: function() {
+
+            this.$http.get('/index.php?option=com_bookatable&task=dashboard.getGames').then((response) => {
+                vm.games = JSON.parse(response.body).games;
+            }, (response) => {
+                // error callback
+                alert('Ha ocurrido un error vuelve a cargar la página e intentalo otra vez.');
+            });
+        },
         setBooking: function(table_id) {
             var formData = new FormData();
 
             formData.append('table_id', table_id);
             formData.append('date', vm.date);
             formData.append('franja', vm.franja);
+            formData.append('selected_game', vm.selected_game);
+
 
             this.$http.post('/index.php?option=com_bookatable&task=dashboard.setBooking', formData).then((response) => {
                 vm.getTables();
                 vm.getBookings();
                 alert(JSON.parse(response.body).msg);
+
+                $('#modal'+table_id).modal('hide');
+                $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();
         }, (response) => {
                 // error callback
                 alert('Ha ocurrido un error vuelve a cargar la página e intentalo otra vez.');
@@ -116,3 +138,4 @@ var vm = new Vue({
 
 vm.getTables();
 vm.getBookings();
+vm.getGames();
