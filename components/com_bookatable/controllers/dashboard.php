@@ -102,8 +102,10 @@ class BookaTableControllerDashboard extends JControllerAdmin
 
             $query = $db->getQuery(true);
 
-            $query->select('*')
-                ->from('#__bookatable_bookings')
+            $query->select('b.*, u.name as usuario, gs.name as juego')
+                ->from('#__bookatable_bookings b')
+                ->join('LEFT', '#__users AS u ON b.user_id = u.id')
+                ->join('LEFT', '#__bookatable_gamesystems AS gs ON b.gamesystem_id = gs.id')
                 ->where('date = "' . $data['date'] . '"')
                 ->where('table_id = ' . $table->id)
                 ->where('evening = ' . $data['franja']);
@@ -113,7 +115,10 @@ class BookaTableControllerDashboard extends JControllerAdmin
             $db->execute();
 
             if (count($db->loadObjectList()) > 0) {
+                $reserva = $db->loadObject();
                 $table->occupied = true;
+                $table->usuario = $reserva->usuario;
+                $table->juego = $reserva->juego;
             }
 
         }

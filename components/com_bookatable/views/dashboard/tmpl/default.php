@@ -41,9 +41,10 @@
                     <small>Selecciona una de las mesas verdes para hacer una reserva</small>
                     <div class="clearfix"></div>
                 </div>
+
                 <div class="x_content">
                     <template v-for="table in tables">
-                        <div class="col-md-6">
+                        <div class="col-md-6" >
                             <button type="button" class="btn-lg btn-block btn" data-toggle="modal"
                                     data-target="#myModal{{table.id}}"
                                     v-bind:class="{ 'btn-danger':  table.occupied, 'btn-success': !table.occupied}">
@@ -92,7 +93,7 @@
                                             <h4 class="modal-title" id="myModalLabel">Mesa ocupada</h4>
                                         </div>
                                         <div class="modal-body">
-                                            Esta mesa esta ocupada
+                                            Esta mesa esta ocupada por {{table.usuario}} para jugar a {{table.juego}}
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">
