@@ -49,6 +49,31 @@ class BookaTableControllerDashboard extends JControllerAdmin
         die;
     }
 
+    public function getGames()
+    {
+        $post = JFactory::getApplication()->input->post;
+        $user = JFactory::getUser();
+        $db   = JFactory::getDbo();
+
+        $query = $db->getQuery(true);
+
+        $query->select('*')
+            ->from('#__bookatable_gamesystems');
+
+        $db->setQuery($query);
+
+        $db->execute();
+
+        if (count($db->loadObjectList()) > 0) {
+            $data = array(
+                'games' => $db->loadObjectList()
+            );
+        }
+
+        echo json_encode($data);
+        die;
+    }
+
     public function getTables()
     {
 
@@ -112,6 +137,7 @@ class BookaTableControllerDashboard extends JControllerAdmin
             'table_id' => $post->get('table_id'),
             'date' => $post->get('date'),
             'franja' => $post->get('franja'),
+            'gamesystem_id' => $post->get('selected_game'),
             'user_id' => $user->id,
         );
 
@@ -166,10 +192,11 @@ class BookaTableControllerDashboard extends JControllerAdmin
             ->columns(
                 array(
                     $db->quoteName('table_id'), $db->quoteName('user_id'),
-                    $db->quoteName('date'), $db->quoteName('evening')
+                    $db->quoteName('date'), $db->quoteName('evening'),
+                    $db->quoteName('gamesystem_id')
                 )
             )
-            ->values($data['table_id'] . ', ' . $data['user_id'] . ',' . $db->quote($data['date']) . ',' . $data['franja']);
+            ->values($data['table_id'] . ', ' . $data['user_id'] . ',' . $db->quote($data['date']) . ',' . $data['franja'] . ',' . $data['gamesystem_id']);
 
         $db->setQuery($query);
 

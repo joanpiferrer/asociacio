@@ -61,13 +61,21 @@
                                         </div>
                                         <div class="modal-body">
                                             ¿Estas seguro que quieres reservar la {{table.name}} para el {{date_formated}} por la {{franja.replace("1", "Mañana").replace("2", "Tarde").replace("3", "Noche")}}?
+                                            <br>
+                                            Si es así indica a que juego vas a jugar, por favor.
+                                            <select v-model="selected_game">
+                                                <option value="0">Selecciona un sistema de juego</option>
+
+                                                <template v-for="game in games">
+                                                    <option value="{{game.id}}">{{game.name}}</option>
+                                                </template>
+                                            </select>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">
                                                 Cancelar
                                             </button>
-                                            <button type="button" class="btn btn-primary" @click="setBooking(table.id)"
-                                                    data-dismiss="modal">Reservar
+                                            <button type="button" class="btn btn-primary"  @click="selected_game == 0 ? alert('Debes seleccionar un sistema de juego') : setBooking(table.id)" >Reservar
                                             </button>
                                         </div>
                                     </div>
