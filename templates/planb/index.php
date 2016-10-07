@@ -228,14 +228,15 @@ if ($menu->getActive() == $menu->getDefault()) {
 
         <!-- page content -->
         <div class="right_col" role="main">
+
             <!-- Begin Content -->
             <a href="<?php echo $this->baseurl; ?>">
                 <?php echo $logo; ?><?php if ($this->params->get('sitedescription')) {
                     echo '<div class="site-description">' . htmlspecialchars($this->params->get('sitedescription')) . '</div>';
                 } ?>
             </a>
-            <jdoc:include type="modules" name="banner" style="xhtml"/>
             <jdoc:include type="modules" name="above-component" style="xhtml"/>
+            <jdoc:include type="modules" name="banner" style="xhtml"/>
             <jdoc:include type="message"/>
             <jdoc:include type="component"/>
             <jdoc:include type="modules" name="below-component" style="none"/>
