@@ -2891,7 +2891,7 @@ ul.project_files li a i {
 /* *********  /pricing  **************************** */
 /* *********  media gallery  **************************** */
 .thumbnail .image {
-  height: 120px;
+  height: 200px;
   overflow: hidden; }
 
 .caption {
@@ -2902,7 +2902,6 @@ ul.project_files li a i {
   margin-bottom: 5px; }
 
 .thumbnail {
-  height: 190px;
   overflow: hidden; }
 
 .view {
@@ -2981,9 +2980,6 @@ ul.project_files li a i {
 
 .view-first:hover img {
   transform: scale(1.1); }
-
-.view-first:hover .mask {
-  opacity: 1; }
 
 .view-first:hover .tools, .view-first:hover p {
   opacity: 1;
