@@ -33,22 +33,13 @@ if ($DISPLAY_DEV_LINK == 1)
 	echo '<div><a class = "dev_link" target="_blank" href = "http://yuragalin.com/joomla-instagram-module">' . JText::_('MOD_BRILLIANT_INSTAJOOM_DEV_TEXT') . '</a></div>';
 
 ?>
-<div class="x_panel">
+<div id="instagram" class="x_panel">
 	<div class="x_title">
 		<h2>Está sucediendo en IPB</h2>
 		<ul class="nav navbar-right panel_toolbox">
 			<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 			</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
-						class="fa fa-wrench"></i></a>
-				<ul class="dropdown-menu" role="menu">
-					<li><a href="#">Settings 1</a>
-					</li>
-					<li><a href="#">Settings 2</a>
-					</li>
-				</ul>
-			</li>
+			
 			<li><a class="close-link"><i class="fa fa-close"></i></a>
 			</li>
 		</ul>
@@ -59,40 +50,59 @@ if ($DISPLAY_DEV_LINK == 1)
 		<div class="row">
 
 
-			<?php
-			foreach ($InstaPhotos as $item) :
-//                echo '<a class = "insta_link" rel="nofollow" target=_blank href = "'.$item["link"].'"><img style = "width: '.$PHOTO_WIDTH.';" class= "instagram_image ';
-//                if($DISPLAY_IMG_HOVER_EFFECT==1)
-//                    echo 'instagram_hover';
-//                echo '" src = "'.$item["images"]["thumbnail"]["url"].'">';
-//                echo '<div class="thumbnail-text">'.$item["caption"]["text"].'</div></a>';
-				$i++;
-				if ($i > $AdminPhotoCount) break;
-
-				?>
-
+			<template v-for="photo in media | slice 0 <?php echo $AdminPhotoCount ?>">
 				<div class="col-md-3">
-					<div class="thumbnail" >
-						<a href="<?php echo $item["link"] ?>" target="_blank">
-							<div class="image view view-first"style="cursor: pointer">
+					<div class="thumbnail">
+						<a v-bind:href="photo.link" target="_blank">
+							<div class="image view view-first" style="cursor: pointer">
 								<img style="width: 100%; height:100%; display: block;"
-								     src="<?php echo $item["images"]["standard_resolution"]["url"] ?>" alt="image">
+								     v-bind:src="photo.images.standard_resolution.url" alt="image">
 								<div class="mask">s
 								</div>
 							</div>
 						</a>
 						<div class="caption">
-							<p><?php echo $item["caption"]["text"]; ?></p>
+							<p>{{photo.caption.text}}</p>
 						</div>
 
 					</div>
 				</div>
-				<?php
-			endforeach;
-			?>
+			</template>
 		</div>
 		<?php if ($DISPLAY_ALL_PHOTOS_LINK == 1)
 			echo '<div><a rel="nofollow" target="_blank" href = "http://instagram.com/' . $USER_NAME . '">ver todas las fotos en instagram</a></div>';
 		?>
 	</div>
 </div>
+<script type="text/javascript">
+
+	// create a new Vue instance and mount it to our div element above with the id of app
+	var vm = new Vue({
+		el: '#instagram',
+		data: {
+			client_id: '<?php echo $client_id ?>',
+			media: {}
+		},
+		methods: {
+			getMedia: function () {
+
+				$.ajax({
+					type: "GET",
+					dataType: "jsonp",
+					url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=' + vm.client_id,
+					success: function (data) {
+						vm.media = data.data;
+					}
+				});
+
+			},
+		}
+	});
+
+	Vue.filter('slice', function (value, begin, end) {
+		return value.slice(begin, end)
+	});
+
+	vm.getMedia();
+
+</script>
