@@ -150,3 +150,4 @@
         </button>
     </div>
 </template>
+<script src="/components/com_bookatable/assets/dashboard.js"></script>

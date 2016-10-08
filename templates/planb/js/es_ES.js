@@ -1,5 +1,7 @@
 // Spanish
 
+$.fn.pickatime = { defaults: {} }
+
 jQuery.extend( jQuery.fn.pickadate.defaults, {
     monthsFull: [ 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre' ],
     monthsShort: [ 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic' ],

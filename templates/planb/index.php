@@ -100,6 +100,24 @@ if ($menu->getActive() == $menu->getDefault()) {
     . ($itemid ? ' itemid-' . $itemid : '')
     . ($params->get('fluidContainer') ? ' fluid' : '');
 ?>">
+
+<!-- jQuery -->
+<script src="templates/planb/js/jQuery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="templates/planb/js/bootstrap/bootstrap.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="templates/planb/js/custom.js"></script>
+<script src="templates/planb/js/helper.js"></script>
+<!-- pickadate -->
+<script src="/templates/planb/js/picker.js"></script>
+<script src="/templates/planb/js/picker.date.js"></script>
+<script src="/templates/planb/js/es_ES.js"></script>
+<script src="/templates/planb/js/moment/moment.min.js"></script>
+<script src="/templates/planb/js/moment/es.js"></script>
+
+<script src="/components/com_bookatable/assets/vue.js"></script>
+<script src="/components/com_bookatable/assets/vue-resource.min.js"></script>
 <div class="container body">
     <div class="main_container">
         <div class="col-md-3 navbar-fixed left_col">
@@ -258,25 +276,6 @@ if ($menu->getActive() == $menu->getDefault()) {
         <!-- /footer content -->
     </div>
 </div>
-
-<!-- jQuery -->
-<script src="templates/planb/js/jQuery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="templates/planb/js/bootstrap/bootstrap.min.js"></script>
-
-<!-- Custom Theme Scripts -->
-<script src="templates/planb/js/custom.js"></script>
-<script src="templates/planb/js/helper.js"></script>
-<!-- pickadate -->
-<script src="/templates/planb/js/picker.js"></script>
-<script src="/templates/planb/js/picker.date.js"></script>
-<script src="/templates/planb/js/es_ES.js"></script>
-<script src="/templates/planb/js/moment/moment.min.js"></script>
-<script src="/templates/planb/js/moment/es.js"></script>
-
-<script src="/components/com_bookatable/assets/vue.js"></script>
-<script src="/components/com_bookatable/assets/vue-resource.min.js"></script>
-<script src="/components/com_bookatable/assets/dashboard.js"></script>
 <script>
     $(document).ready(function() {
         var yesterday = new Date((new Date()).valueOf()-1000*60*60*24);

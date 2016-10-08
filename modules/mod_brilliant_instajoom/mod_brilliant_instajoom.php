@@ -21,28 +21,18 @@
 
 defined('_JEXEC') or die;
 
-// подключаем наш хелпер
-require_once __DIR__ . '/helper.php';
 
-//подключаем CSS
 $document = JFactory::getDocument();
 $document->addStyleSheet('modules/mod_brilliant_instajoom/tmpl/style.css');
 
-//берем параметры из файла конфигурации
 $AdminPhotoCount = $params->get('AdminPhotoCount');
-$CLIENT_ID = $params->get('CLIENT_ID');
+$client_id = $params->get('CLIENT_ID');
 $USER_ID = $params->get('USER_ID');
 $PHOTO_WIDTH = $params->get('PHOTO_WIDTH');
 $USER_NAME = $params->get('USER_NAME');
-$DISPLAY_DEV_LINK = $params->get('DISPLAY_DEV_LINK');
 $DISPLAY_ALL_PHOTOS_LINK = $params->get('DISPLAY_ALL_PHOTOS_LINK');
-$DISPLAY_IMG_HOVER_EFFECT = $params->get('DISPLAY_IMG_HOVER_EFFECT');
 
 $tag = 'irregularesplanb';
 $client_id = "3989015589.3a9e90b.975f8a629b814302a21be4260ec0eacb";
-$url = 'https://api.instagram.com/v1/users/self/media/recent/?access_token='.$CLIENT_ID;
-
-$inst_stream = modBrilliantInstaJoom::callInstagram($url);
-$InstaPhotos = json_decode($inst_stream, true)['data'];
 
 require JModuleHelper::getLayoutPath('mod_brilliant_instajoom', $params->get('layout', 'default'));
