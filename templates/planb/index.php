@@ -65,6 +65,21 @@ if ($menu->getActive() == $menu->getDefault()) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <jdoc:include type="head"/>
+
+    <!-- jQuery -->
+    <script src="templates/planb/js/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="templates/planb/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- pickadate -->
+    <script src="/templates/planb/js/picker.js"></script>
+    <script src="/templates/planb/js/picker.date.js"></script>
+    <script src="/templates/planb/js/es_ES.js"></script>
+    <script src="/templates/planb/js/moment/moment.min.js"></script>
+    <script src="/templates/planb/js/moment/es.js"></script>
+
+    <script src="/components/com_bookatable/assets/vue.js"></script>
+    <script src="/components/com_bookatable/assets/vue-resource.min.js"></script>
     <?php
     // Use of Google Font
     if ($this->params->get('googleFont')) {
@@ -101,23 +116,6 @@ if ($menu->getActive() == $menu->getDefault()) {
     . ($params->get('fluidContainer') ? ' fluid' : '');
 ?>">
 
-<!-- jQuery -->
-<script src="templates/planb/js/jQuery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="templates/planb/js/bootstrap/bootstrap.min.js"></script>
-
-<!-- Custom Theme Scripts -->
-<script src="templates/planb/js/custom.js"></script>
-<script src="templates/planb/js/helper.js"></script>
-<!-- pickadate -->
-<script src="/templates/planb/js/picker.js"></script>
-<script src="/templates/planb/js/picker.date.js"></script>
-<script src="/templates/planb/js/es_ES.js"></script>
-<script src="/templates/planb/js/moment/moment.min.js"></script>
-<script src="/templates/planb/js/moment/es.js"></script>
-
-<script src="/components/com_bookatable/assets/vue.js"></script>
-<script src="/components/com_bookatable/assets/vue-resource.min.js"></script>
 <div class="container body">
     <div class="main_container">
         <div class="col-md-3 navbar-fixed left_col">
@@ -276,6 +274,9 @@ if ($menu->getActive() == $menu->getDefault()) {
         <!-- /footer content -->
     </div>
 </div>
+
+<jdoc:include type="modules" name="debug" style="none"/>
+
 <script>
     $(document).ready(function() {
         var yesterday = new Date((new Date()).valueOf()-1000*60*60*24);
@@ -288,8 +289,9 @@ if ($menu->getActive() == $menu->getDefault()) {
         });
     });
 </script>
-
-<jdoc:include type="modules" name="debug" style="none"/>
+<!-- Custom Theme Scripts -->
+<script src="templates/planb/js/custom.js"></script>
+<script src="templates/planb/js/helper.js"></script>
 </body>
 
 </html>
