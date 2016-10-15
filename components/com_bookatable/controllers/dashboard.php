@@ -269,4 +269,32 @@ class BookaTableControllerDashboard extends JControllerAdmin
         die;
 
     }
+
+    public function getStats()
+    {
+        $post = JFactory::getApplication()->input->post;
+        $user = JFactory::getUser();
+        $db   = JFactory::getDbo();
+
+        $query = $db->getQuery(true);
+
+        $query->select('count(*) AS valor, gs.name AS name, (count(*)/suma.total)*100 AS percent')
+            ->from('#__bookatable_bookings AS b')
+        ->join('INNER', '#__bookatable_gamesystems AS gs ON b.gamesystem_id = gs.id' )
+        ->join('CROSS', '(SELECT count(*) AS total FROM #__bookatable_bookings) as suma')
+        ->group('b.gamesystem_id');
+
+        $db->setQuery($query);
+
+        $db->execute();
+
+        if (count($db->loadObjectList()) > 0) {
+            $data = array(
+                'stats' => $db->loadObjectList()
+            );
+        }
+
+        echo json_encode($data);
+        die;
+    }
 }
