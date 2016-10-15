@@ -282,7 +282,8 @@ class BookaTableControllerDashboard extends JControllerAdmin
             ->from('#__bookatable_bookings AS b')
         ->join('INNER', '#__bookatable_gamesystems AS gs ON b.gamesystem_id = gs.id' )
         ->join('CROSS', '(SELECT count(*) AS total FROM #__bookatable_bookings) as suma')
-        ->group('b.gamesystem_id');
+        ->group('b.gamesystem_id')
+        ->order('valor desc');
 
         $db->setQuery($query);
 

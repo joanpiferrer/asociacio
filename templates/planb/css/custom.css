@@ -331,7 +331,7 @@ body {
   font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
-  line-height: 1.471; }
+  line-height: 22px; }
 
 .main_container .top_nav {
   display: block;
@@ -1437,7 +1437,7 @@ ul.quick-list li i {
   width: 20%; }
 
 .w_25 {
-  width: 25%; }
+  width: 65%; }
 
 .w_55 {
   width: 55%; }
