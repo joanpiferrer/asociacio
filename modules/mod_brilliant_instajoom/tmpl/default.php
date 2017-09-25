@@ -37,7 +37,7 @@ if ($DISPLAY_DEV_LINK == 1)
     <div class="col-md-9">
         <div id="instagram" class="x_panel">
             <div class="x_title">
-                <h2>Está sucediendo en IPB</h2>
+                <h1>Asociación Irregulares de Planb</h1>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
