@@ -3106,7 +3106,6 @@ ul.project_files li a i {
 /* *********  media gallery  **************************** */
 
 .thumbnail .image {
-  height: 200px;
   overflow: hidden;
 }
 .caption {
@@ -3217,7 +3216,6 @@ ul.project_files li a i {
  * bootstrap-vertical-tabs - v1.2.1
  * https://dbtek.github.io/bootstrap-vertical-tabs
  * 2014-11-07
- * Copyright (c) 2014 İsmail Demirbilek
  * License: MIT
  */
 
@@ -4814,4 +4812,8 @@ ul.notifications {
 /** /Dropzone.js **/
 form#member-profile {
   margin-top: 64px;
+}
+.x_content .row .col-md-4{
+  float: none;
+  display: inline-block;
 }
