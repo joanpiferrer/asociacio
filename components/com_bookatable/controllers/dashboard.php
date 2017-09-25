@@ -281,7 +281,7 @@ class BookaTableControllerDashboard extends JControllerAdmin
         $query->select('count(*) AS valor, gs.name AS name, (count(*)/suma.total)*100 AS percent')
             ->from('#__bookatable_bookings AS b')
         ->join('INNER', '#__bookatable_gamesystems AS gs ON b.gamesystem_id = gs.id' )
-        ->join('CROSS', '(select "20" as total) as suma')
+        ->join('CROSS', '(select "100" as total) as suma')
 //        ->join('CROSS', '(SELECT count(*) AS total FROM #__bookatable_bookings) as suma')
         ->group('b.gamesystem_id')
         ->order('valor desc');
